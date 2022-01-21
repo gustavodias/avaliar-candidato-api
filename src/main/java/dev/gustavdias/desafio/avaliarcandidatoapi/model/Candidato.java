@@ -7,14 +7,11 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Getter
 @Setter
 @ToString
-@RequiredArgsConstructor
-@Entity(name = "TB_Tarefa")
-@Table(name = "TB_Tarefa")
+@Entity(name = "Candidato")
+@Table(name = "Candidato")
 public class Candidato implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -37,6 +34,19 @@ public class Candidato implements Serializable {
     private Integer pontuacaoDesafio;
     @Column
     private String status;
+
+    public Candidato() {
+    }
+
+    public Candidato(String nome, Integer idade, String vaga, Integer softSkills, Integer hardSkills, Integer pontuacaoDesafio, String status) {
+        this.nome = nome;
+        this.idade = idade;
+        this.vaga = vaga;
+        this.softSkills = softSkills;
+        this.hardSkills = hardSkills;
+        this.pontuacaoDesafio = pontuacaoDesafio;
+        this.status = status;
+    }
 
     @Override
     public boolean equals(Object o) {
