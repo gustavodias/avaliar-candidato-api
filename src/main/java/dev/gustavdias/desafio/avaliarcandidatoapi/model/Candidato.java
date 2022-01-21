@@ -35,6 +35,8 @@ public class Candidato implements Serializable {
     private Integer hardSkills;
     @Column
     private Integer pontuacaoDesafio;
+    @Column
+    private String status;
 
     @Override
     public boolean equals(Object o) {
